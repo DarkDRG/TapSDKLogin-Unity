@@ -30,7 +30,7 @@ namespace TapSDK.Login.Standalone
         }
     }
 
-    public class TapTapLoginOpenIDProvider: IOpenIDProvider {
+    public class TapTapLoginOpenIDProviderStandalone: IOpenIDProvider {
         public string GetOpenID() {
             return TapLoginStandaloneImpl.Instance.GetCurrentAccount().Result?.openId;
         }

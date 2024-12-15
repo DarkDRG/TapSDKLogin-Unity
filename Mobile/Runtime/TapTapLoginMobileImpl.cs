@@ -4,20 +4,19 @@ using TapSDK.Core;
 using TapSDK.Login.Mobile.Runtime;
 using TapSDK.Login.Internal;
 using UnityEngine;
-using System.Runtime.InteropServices;
 
 namespace TapSDK.Login.Mobile
 {
-    public class TapTapLoginImpl: ITapTapLoginPlatform
+    public class TapTapLoginMobileImpl: ITapTapLoginPlatform
     {
         #if UNITY_IOS
-        [DllImport("__Internal")]
+        [System.Runtime.InteropServices.DllImport("__Internal")]
         private static extern void RegisterTapTapSDKLoginAppDelegateListener();
         #endif
 
         private const string SERVICE_NAME = "BridgeLoginService";
         
-        public TapTapLoginImpl(){
+        public TapTapLoginMobileImpl(){
             EngineBridge.GetInstance().Register(
                 "com.taptap.sdk.login.unity.BridgeLoginService", 
                 "com.taptap.sdk.login.unity.BridgeLoginServiceImpl");
@@ -25,7 +24,6 @@ namespace TapSDK.Login.Mobile
 
         public void Init(string clientId, TapTapRegionType regionType)
         {
-            
             #if UNITY_IOS
             RegisterTapTapSDKLoginAppDelegateListener();
             #endif  
