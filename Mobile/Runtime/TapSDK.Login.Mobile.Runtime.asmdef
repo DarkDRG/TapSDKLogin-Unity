@@ -8,8 +8,7 @@
     ],
     "includePlatforms": [
         "Android",
-        "Editor",
-        "iOS"
+        "Editor"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -17,7 +16,7 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [
-        "UNITY_ANDROID || UNITY_IOS"
+        "UNITY_ANDROID"
     ],
     "versionDefines": [],
     "noEngineReferences": false
