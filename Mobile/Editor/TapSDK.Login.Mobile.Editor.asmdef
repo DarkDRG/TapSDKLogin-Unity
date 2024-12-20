@@ -1,5 +1,6 @@
 {
     "name": "TapSDK.Login.Mobile.Editor",
+    "rootNamespace": "",
     "references": [
         "GUID:56f3da7a178484843974054bafe77e73"
     ],
@@ -11,7 +12,9 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "TAPTAP_CN || UNITY_ANDROID"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }
