@@ -1,9 +1,13 @@
 {
     "name": "TapSDK.Login.Runtime",
+    "rootNamespace": "",
     "references": [
         "GUID:7d5ef2062f3704e1ab74aac0e4d5a1a7"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Android",
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
